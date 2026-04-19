@@ -24,6 +24,10 @@ export default function MediaMonitor() {
     setLoading(false);
   };
 
+  const placeholder = `@username: Love the new features on Acme app! It is so intuitive.
+Reddit: Acme customer service is terrible, been waiting 3 weeks for a response
+News: Acme Corp announces Q3 revenue up 15% amid market expansion`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 text-white font-sans">
       <header className="border-b border-white/10">
@@ -44,7 +48,7 @@ export default function MediaMonitor() {
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="@username: Love the new features on Acme app! It is so intuitive. ⭐⭐⭐⭐⭐&#10;Reddit: Acme customer service is terrible, been waiting 3 weeks for a response&#10;News: Acme Corp announces Q3 revenue up 15% amid market expansion..."
+            placeholder={placeholder}
             className="w-full h-52 bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white placeholder-gray-500 resize-none focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
           />
           <div className="flex items-center justify-between">
